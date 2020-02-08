@@ -1,6 +1,6 @@
 # whatsappp
 
-A new Flutter project.
+WhatsApp UI clone 
 
 ## Getting Started
 
