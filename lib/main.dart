@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: "WhatsAppp",
       theme: ThemeData(
         primaryColor: Color(0xff075e54),
         accentColor: Colors.green,
