@@ -14,7 +14,8 @@ class WhatsHome extends StatefulWidget {
   _WhatsHomeState createState() => _WhatsHomeState();
 }
 
-class _WhatsHomeState extends State<WhatsHome> with SingleTickerProviderStateMixin{
+class _WhatsHomeState extends State<WhatsHome>
+    with SingleTickerProviderStateMixin {
   TabController _tabController;
 
   @override
@@ -29,44 +30,46 @@ class _WhatsHomeState extends State<WhatsHome> with SingleTickerProviderStateMix
     return Scaffold(
       appBar: AppBar(
         title: Text('WhatsApp'),
-        bottom: TabBar(
-          controller: _tabController,
-          tabs: <Widget>[
-          Tab(icon: Icon(Icons.camera_alt),),
-          Tab(text: 'CHATS',),
-          Tab(text: 'STATUS',),
-          Tab(text: 'CALLS',),
+        bottom: TabBar(controller: _tabController, tabs: <Widget>[
+          Tab(
+            icon: Icon(Icons.camera_alt),
+          ),
+          Tab(
+            text: 'CHATS',
+          ),
+          Tab(
+            text: 'STATUS',
+          ),
+          Tab(
+            text: 'CALLS',
+          ),
         ]),
         actions: <Widget>[
-         
-                Icon(
-                  Icons.search,
-                  size: 28.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                ),
-                Icon(
-                  Icons.more_vert,
-                  size: 28.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 10.0),
-                ),
-              ],
-
+          Icon(
+            Icons.search,
+            size: 28.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          ),
+          Icon(
+            Icons.more_vert,
+            size: 28.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 10.0),
+          ),
+        ],
       ),
-
       body: TabBarView(
         controller: _tabController,
         children: <Widget>[
           Camera(),
           Chat(),
           Status(),
-          Calls()
-
-      ]),
-      
+          Calls(),
+        ],
+      ),
     );
   }
 }

@@ -4,6 +4,7 @@
   */
 
 import 'package:flutter/material.dart';
+import 'package:whatsappp/splashScreen.dart';
 import 'whatHome.dart';
 
 void main() => runApp(MyApp());
@@ -16,9 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Color(0xff075e54),
         accentColor: Colors.green,
-        
       ),
-      home: WhatsHome(),
+      home: WhatSplaph(),
     );
   }
 }
